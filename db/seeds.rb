@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Voter.create!([
+  { name: "Alexander Profeit" },
   { name: "Emily A-B" },
   { name: "Ben Stelmach" },
   { name: "Justin Turple" },

@@ -7,4 +7,5 @@ class Vote < ApplicationRecord
   validates :voter_id, presence: true
   validates :votee_id, presence: true
   validates :position_id, presence: true
+  validates :voter_id, uniqueness: { scope: [:position_id] }
 end

@@ -13,6 +13,6 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
   test "cannot view vote page without proper token" do
     get "/votes/new", params: { token: 'fuck' }
 
-    assert
+    assert_response :forbidden
   end
 end
