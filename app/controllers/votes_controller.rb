@@ -23,14 +23,10 @@ class VotesController < ApplicationController
       position_id = position.to_i
       votee_id = votee.to_i
 
-      vote = current_user.votes.new(position_id: position_id, votee_id: votee_id)
-      if vote.save
-        current_user.update!(voted: true)
-        return redirect_to pages_thanks_url
-      else
-        return redirect_to new_vote_url(params: { token: params[:token] }), alert: vote.errors.full_messages
-      end
+      current_user.votes.create!(position_id: position_id, votee_id: votee_id)
     end
+    current_user.update!(voted: true)
+    return redirect_to pages_thanks_url
   end
 
   private
