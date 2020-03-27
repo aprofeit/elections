@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 46px;
+  font-weight: 100;
+}
