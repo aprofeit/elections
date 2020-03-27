@@ -15,7 +15,6 @@ class VotesController < ApplicationController
       return redirect_to new_vote_url(params: { token: params[:token] }), alert: 'You must select a candidate for all positions'
     end
 
-    debugger
     if current_user.voted?
       return redirect_to new_vote_url(params: { token: params[:token] }), alert: "Can only vote once #{current_user.name}, tsk tsk"
     end
