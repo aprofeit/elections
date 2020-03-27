@@ -1,7 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  token: MyString
+alex:
+  name: Alexander Profeit
+  token: abc123
 
-two:
-  token: MyString
+lees:
+  name: Lees Radford

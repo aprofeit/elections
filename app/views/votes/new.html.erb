@@ -1,0 +1,25 @@
+  <div>
+    <h1>Election</h1>
+
+    <div class="choices">
+      <div class="positions">
+        <ul>
+          <% @positions.each do |position| %>
+            <li><%= position.title %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="selections">
+        <%= form_with(url: '/votes', method: 'post') do %>
+          <ul>
+            <% @positions.each do |position| %>
+              <li>
+                <%= collection_select(:votee, :votee_id, @voters, :id, :name, include_blank: 'Select a candidate') %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+class VotesController < ApplicationController
+  before_action :ensure_valid_token
+
+  def new
+  end
+
+  def create
+  end
+
+  private
+
+  def ensure_valid_token
+    return false unless Voter.where(token: params[:token]).exists?)
+  end
+end
