@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+
     <% if flash[:alert] %>
       <div class="alert">
         <%= flash[:alert] %>

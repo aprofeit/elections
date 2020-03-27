@@ -15,7 +15,7 @@
           <ul>
             <% @positions.each do |position| %>
               <li>
-                <%= f.collection_select(position.id, @voters.shuffle ,:id, :name, include_blank: 'Select a candidate') %>
+                <%= f.collection_select(position.id, @voters.sort_by(&:name),:id, :name, include_blank: 'Select a candidate') %>
               </li>
             <% end %>
           </ul>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'votes#new'
+  root to: 'pages#home'
 
   resources :votes, only: [:new, :create]
 

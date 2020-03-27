@@ -2,6 +2,10 @@ class VotesController < ApplicationController
   before_action :ensure_valid_token
 
   def new
+    if current_user.voted?
+      flash[:notice] = "Feel free to look around, but you can only vote once :)"
+    end
+
     @positions = Position.all
     @voters = Voter.all
   end
