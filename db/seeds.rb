@@ -26,7 +26,8 @@ Voter.create!([
   { name: "Emma Verch" },
   { name: "Ashley Sextone" },
   { name: "Stephanie Canham" },
-  { name: "Dorina Rusu" }
+  { name: "Dorina Rusu" },
+  { name: "Danielle Krukowski" }
 ])
 
 Position.create!([
