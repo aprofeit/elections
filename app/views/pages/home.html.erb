@@ -1,40 +1,22 @@
-<div class-"home-container">
-  <h1>Tentative QuaranTeam</h1>
+<h1 class="mt-4">QuaranTeam</h1>
 
-  <div>
-    <strong>Minister of Computer</strong> Alexander Profeit
+<% @positions.each do |position| %>
+  <div class="card mt-4 mb-4">
+    <div class="card-body">
+      <h5 class="card-title"><%= position[:position] %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Leader</h6>
+      <p class="card-text"><%= position [:leader] %></p>
+      <% if position[:deputy] %>
+        <h6 class="card-subtitle mb-2 text-muted">Deputy</h6>
+        <p class="card-text"><%= position[:deputy] %></p>
+      <% end %>
+    </div>
   </div>
-  <div>
-    <strong>Minister of Injustice</strong> Dorina Rusu
-  </div>
-  <div>
-    <strong>Minister of Super Injustice</strong> Celina friend of Profeit
-  </div>
-  <div>
-    <strong>Minister of War</strong> Yannis Fotiadis
-  </div>
-  <div>
-    <strong>Minister of Sirens</strong> Emily A-b
-  </div>
-  <div>
-    <strong>Minister of Dirt</strong> Jeff Houlton
-  </div>
-  <div>
-    <strong>Minister of Fluids</strong> Sheldon O'Neill
-  </div>
-  <div>
-    <strong>Minister of Fittin' Dis</strong> Derek Pawsey
-  </div>
-  <div>
-    <strong>Minister of Killing Parties</strong> Renée
-  </div>
-  <div>
-    <strong>Director of Sexual Miseducation</strong> Sheldon O'Neill
-  </div>
-  <div>
-    <strong>Benevolent Dictator</strong> Steph Melo
-  </div>
+<% end %>
 
+<hr class="mt-5 mb-5" />
+
+<div class="mt-4 mb-4">
   <h2>Movie/TV Requests for Minister of Computer</h2>
-  <a href="https://docs.google.com/spreadsheets/d/1tZQzbWX7-WxOcgEYN3YqFXa8tSNpYr9oHEK-O4ACGlk/edit?usp=sharing">Requests</a>
+  <a class="btn btn-primary mt-3" target="_blank" href="https://docs.google.com/spreadsheets/d/1tZQzbWX7-WxOcgEYN3YqFXa8tSNpYr9oHEK-O4ACGlk/edit?usp=sharing">Requests</a>
 </div>
