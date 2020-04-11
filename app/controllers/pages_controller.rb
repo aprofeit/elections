@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       {
         position: "Minister of Computer",
         leader: "Alexander Profeit",
-        deputy: "Derek Pawsey"
+        deputy: "MUSKLES"
       },
       {
         position: "Minister of Injustice",
